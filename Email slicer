@@ -1,0 +1,7 @@
+//This is a program used to slice email and learn slicing in list 
+
+
+email= input("enter ur email id ").strip()
+username=email[:email.index('@')]
+domain=email[email.index('@')+1:]
+print(f"the email is {username} and domain is {domain}")
