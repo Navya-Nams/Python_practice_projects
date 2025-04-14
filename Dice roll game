@@ -1,0 +1,17 @@
+# Dice roll game
+
+import random
+x= input("Roll the dice ? (Y/N) ")
+if (x.upper() == 'Y'):
+    a = random.randint(1,6)
+    b = random.randint(1,6)
+    print(f'{a},{b}')
+    
+elif (x.upper() =='N'):
+    print("Thanks for participating ")
+
+else:
+    print("Invalid input")
+
+
+
