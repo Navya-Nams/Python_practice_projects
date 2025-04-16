@@ -1,0 +1,18 @@
+# Number guessing game
+
+import random
+
+actual_num = random.randint(1,100)
+try:
+    while True:
+        num = int(input("Guess the number "))
+        if (num == actual_num):
+            print("Congrats! You guessed right")
+            break
+        else:
+            if (num > actual_num):
+                print("Guessed number is too high")
+            else:
+                print("Guessed number is too low")
+except ValueError:
+    print("Please enter a valid a number")
