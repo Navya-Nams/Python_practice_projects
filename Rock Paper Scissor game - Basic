@@ -1,0 +1,36 @@
+# Rock,Paper and scissors
+
+import random
+
+while True:
+   
+    rock = 'r'
+    paper = 'p'
+    scissor = 's'
+    choices = ('r','p','s')
+    computer_choice = random.choice(choices)
+    user_choice = input("Enter the value Rock,paper,scissor(r,p,s) ")
+
+    if user_choice not in choices:
+        print("Enter valid keyword ")
+        continue
+    print (f"computer choice is {computer_choice }")
+    print(f'user choice is {user_choice}')
+
+
+    if ((user_choice == 'r' and computer_choice == 's') or
+       (user_choice == 's' and computer_choice == 'p') or 
+       (user_choice == 'p' and computer_choice == 'r' )):
+           print("you won")
+    elif(user_choice == computer_choice):
+        print("tie")
+    else:
+        print("you lose")
+    continue_game = input("continue game y/n ").lower()
+
+
+    if continue_game == 'y':
+        continue 
+    else:
+        break
+        
