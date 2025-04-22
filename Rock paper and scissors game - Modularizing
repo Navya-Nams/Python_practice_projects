@@ -1,0 +1,50 @@
+# Rock,Paper and scissors
+
+import random
+choices = ('r','p','s')
+user_score = 0
+computer_score = 0
+   
+def get_inputs():
+    user_choice = input("Enter the value Rock,paper,scissor(r,p,s) ")
+    if user_choice in choices:
+        return user_choice
+    else:
+        print("invalid choice")
+        return get_inputs()
+    
+def display_choices(user_choice, computer_choice):
+    print (f"computer choice is {computer_choice }")
+    print(f'user choice is {user_choice}')
+    
+def determine_winner(user_choice, computer_choice):
+    global user_score,computer_score
+    if ((user_choice == 'r' and computer_choice == 's') or
+       (user_choice == 's' and computer_choice == 'p') or 
+       (user_choice == 'p' and computer_choice == 'r' )):
+           print("you won")
+           user_score += 1
+           return user_score
+    elif(user_choice == computer_choice):
+        print("It's a tie")
+    else:
+        print("you lost")
+        computer_score +=1
+        return computer_score
+
+        
+def play_game():
+    while True:
+        user_choice = get_inputs()
+        computer_choice = random.choice(choices)
+        display_choices(user_choice, computer_choice)
+        determine_winner(user_choice, computer_choice)
+        print(f"User score is {user_score} and Computer score is {computer_score}")
+        continue_game = input("continue game y/n ").lower()
+        if continue_game == 'y':
+            continue 
+        else:
+            break
+        
+        
+play_game()       
