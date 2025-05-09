@@ -1,0 +1,15 @@
+# Fibonacci series
+
+series_length = int(input("Enter the length of fibonacci series ")) 
+first_number = 0
+second_number = 1
+print(f"The fibonacci series is ")
+print(first_number)
+
+for n in range (series_length):
+    fib_series = first_number + second_number
+    first_number = second_number
+    second_number = fib_series
+    print (fib_series)
+
+
