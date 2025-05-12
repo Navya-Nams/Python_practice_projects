@@ -1,0 +1,32 @@
+# Word guessing game
+
+import random
+
+name = input("Enter your name ")
+print("Hello "+ name + " welcome to word guessing game")
+words = [ 'good','bad','computer','hello','hai'] 
+word = random.choice(words)
+turns = 12
+guesses = " "
+
+print(word)
+while turns > 0:
+    failure = 0
+    for char in word:
+        if char in guesses:
+            print (char, end = " ")
+        else:
+            print('_',end = "")
+            failure += 1
+        print()
+    
+    if failure == 0:
+        print("you won")
+        print("The word is ", word)
+        break
+  
+    guess = input(" Enter the letter to be guessed ")
+    guesses += guess
+    if guess not in word:
+        turns -= 1
+        print("wrong " + "you are left with " + str(turns) +" turns" )
