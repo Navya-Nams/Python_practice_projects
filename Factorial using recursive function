@@ -1,0 +1,21 @@
+# Factorial using recursive function
+
+def fact(n):
+    if (n == 0 or n ==1):
+        return 1
+    else:
+        return n * fact(n-1)
+      
+        
+num = int(input("Enter the number "))      
+res = (fact(num))
+print(f"The factorial of given number is {res}")
+
+# Using single line code 
+ 
+def fact(n):
+    return 1 if(n == 1 or n == 0) else n*fact(n-1)
+
+num = int (input("Enter the number "))
+res = (fact(num))
+print(f"The factorial of given number is {res}")
