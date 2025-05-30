@@ -1,0 +1,8 @@
+# Factorial  of a given number
+
+num = int(input("Enter the number "))
+fact = 1
+for i in range (num):
+    fact = fact * num
+    num = num - 1
+print(f"Factorial of a given number is {fact}")
